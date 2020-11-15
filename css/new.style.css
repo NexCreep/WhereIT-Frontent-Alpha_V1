@@ -1,0 +1,15 @@
+td{
+    width: 50%;
+    padding: 15px;
+    background-color: #205e6d;
+    border-radius: 15px;
+    border: 5px solid #5D9B9B;
+}
+input, textarea, select{
+    border-radius: 8px;
+}
+.tinput{
+    color: #05283b;
+    border-color: green;
+    box-shadow: none;
+}

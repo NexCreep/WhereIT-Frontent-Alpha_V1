@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shorcut icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/new.style.css">
+	<title>AD Designer - Where IT</title>
+	<!-- Imports -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/255fc68660.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</head>
+<body class="bg-white_green">
+    <nav class="navbar navbar-expand-lg navbar-light bg-blue" id="nav-bar">
+		<a class="navbar-brand" href="#">
+			<img src="../img/logo_Big.jpg" alt="WhereIT" height="50px" width="100px">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link text-info" href="../index.html" data-toggle="tooltip" data-placement="bottom" title="Humm...¿que tal si volvemos a casa?">
+						Home &nbsp<i class="fas fa-home"></i></a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle text-info" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						User
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Log In &nbsp &nbsp<i class="fas fa-sign-in-alt"></i></a>
+						<a class="dropdown-item" href="#">Log Out <i class="fas fa-sign-out-alt"></i></a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Sign Up <i class="fas fa-database"></i></a>
+					</div>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0" width="1000px">
+				<input class="form-control mr-sm-2 animation-search" type="search" placeholder="Puede que..." aria-label="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar 🔍</button>
+			</form>
+		</div>
+    </nav>
+   <article>
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align: center;">Crear un anuncio es muy facil 😊</h1>
+    <table style="position: relative; left: 40px; border-collapse: 2px; width: 95%; display: flex;">
+        <tr>
+            <td>
+                <h1>Inserte los datos por aqui...</h1>
+                <br>
+                
+                <form class="cardAD">
+                    <label for="nameof">Nombre del anunciante:&nbsp</label>
+                    <input maxlength="33" type="text" name="nameOf" class="tinput" id="nameOf" oninput="nameOfFunction()" placeholder="Where IT"><br>
+                    <h2 style="color: #0c805a;">─────────────────────────────</h2>
+                    <label for="imA">¿Que tipo de entidad eres?</label> 〰 &nbsp
+                    <select name="imA" id="imA" class="border border-warning" onchange="imAFunction()">
+                        <option value="enterprise" selected>Empresa</option>
+                        <option value="profesional">Profesional</option>
+                    </select><br>
+                    <h2 style="color: #0c805a;">─────────────────────────────</h2>
+                    <label for="describeOF">Describe brevemente lo que haces o hace tu entidad :</label>
+                    <textarea maxlength="140" oninput="descriptionOfFunction()" name="describeOF" id="describeOF" cols="40" rows="5" placeholder="¡¡Somos una pagina que te ayudara a encontrar al profesional informatico que necesites!! 🙆‍♂️🙆‍♀️"></textarea>
+                    <h2 style="color: #0c805a;">─────────────────────────────</h2>
+                </form>
+                <button class="btn btn-outline-success my-2 my-sm-0" style="width: 600px; height: 80px;" onclick="uploadCard()"><h2>Sube el anuncio</h2><i class="fas fa-upload"></i></button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </td>
+            <td>
+                <h1>...y saldran por aqui</h1>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="card" style="width: 600px; height: 204px;">
+					<div class="card-body" id="ad-body" style="background: url('../img/logo.jpg') no-repeat right center;">
+						<h5 class="card-title"><span id="ad-title">WhereIT</span>&nbsp<span><a href="#" id="entity-icon" class="badge badge-danger" data-toggle="tooltip" data-placement="top" title="Amplia plantilla con alta disponibilidad">EMPRESA</a></span></h5>
+						<p class="card-text" id='ad-description'>¡¡Somos una pagina que te ayudara a encontrar al profesional informatico que necesites!! 🙆‍♂️🙆‍♀️</p>
+						<a href="#" class="btn btn-primary">View Porfile 👁‍🗨</a>
+						<div class="recom">
+							<span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+								&nbsp &nbsp &nbsp ∞ &nbsp<i class="far fa-comment"></i></span>
+							</div>
+						</div>
+					</div>
+                </div>
+                <p style="text-align: center; float: center;" id="loading">
+                    
+                </p>
+                <p style="text-align: center; float: center;" id="success">
+                    
+                </p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </td>
+        </tr>
+    </table>
+   </article>
+</body>
+<script src="../js/nav.js"></script>
+<script src="../js/formulary.js"></script>
+</html>

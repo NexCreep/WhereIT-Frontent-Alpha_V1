@@ -2,11 +2,11 @@
 
 ### Frontent hecho con:
 
-#### -HTML 5 :fa-html5:
+#### -HTML 5 
 
-#### -CSS 3 :fa-css3:
+#### -CSS 3 
 
-#### -JavaScript ES6 :fa-js-square:
+#### -JavaScript ES6 
 
 ### *Previews:*
 

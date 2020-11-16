@@ -8,7 +8,7 @@
 
 #### -JavaScript ES6 :fa-js-square:
 
-### Previews:
+### *Previews:*
 
 ##### Pagina principal
 
